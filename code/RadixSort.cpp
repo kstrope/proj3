@@ -7,8 +7,10 @@ using namespace std;
 
 void print(vector<int> numbers[], int input) {
     for(int i = 0; i < input; i++) {
-        cout << numbers[input].at(i) << ";";
-        if (i == 9)
+	for(int j = 0; j< 10; j++){
+        cout << numbers[i].at(j) << ";";
+	}
+        if (input != input-1)
         {
                 cout << endl;
         }
@@ -51,7 +53,7 @@ void MyFunc (vector<int> numbers[], int input, int checks) {
 	}
 	checks--;
 	if (checks < 0)
-		print(numbers2, checks);
+		print(numbers2, input);
 	else
 		MyFunc(numbers2, input, checks);
 }
